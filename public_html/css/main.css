@@ -1,0 +1,198 @@
+
+:root {
+  --primary-green: #24449c;
+  --primary: #ffffff;
+  --secondary: #44b44c;
+  --text-dark: #000;
+  --primary-gradient: linear-gradient(to right, #44B54F, #223F97);
+  --primary-white-color: #ffffff;
+}
+.btn-common {
+  background: var(--primary-gradient);
+  padding: 10px 30px !important;
+  font-weight: 600;
+  color: var(--primary-white-color) !important;
+  border-radius: 30px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary{
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+
+*,
+span {
+  font-family: "Inria Sans", sans-serif;
+}
+
+p {
+  font-family: "Inria Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title {
+  font-family: "Quicksand", sans-serif;
+  color: #24449c;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+
+.nav-link {
+  font-weight: 400 !important;
+  /* or use normal if needed */
+}
+
+.navbar .nav-link {
+  font-family: "Saira", sans-serif;
+  text-transform: capitalize;
+  /* optional */
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.nav-link a {
+  font-weight: normal;
+}
+
+/* Entire Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (Background) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumb (Bubble-style) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #44b444, #2c9137);
+  border-radius: 20px;
+  border: 3px solid #f0f0f0;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* On Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2c9137, #1e6e2a);
+}
+
+/* Top Scrolling Info Bar */
+.scrolling-info {
+  background-color: #f1f1f1;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #24449c;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-info .marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Navbar Styles */
+.navbar-light {
+  background-color: var(--primary) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+}
+
+.navbar-light .nav-link:hover,
+.navbar-light .dropdown-menu a:hover {
+  color: var(--secondary) !important;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: #000;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .scrolling-info {
+    font-size: 12px;
+  }
+
+  .navbar-brand img {
+    height: 25px;
+  }
+}
+.navbar-brand img {
+  height: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 25px;
+  }
+}
+
+.navbar-light {
+  background-color: linear-gradient(to right, #24449c, #44b44c) !important;
+}
