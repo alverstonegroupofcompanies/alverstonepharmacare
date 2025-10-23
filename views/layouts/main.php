@@ -78,6 +78,8 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <meta name="twitter:image" content="<?= Yii::$app->request->baseUrl ?>/favicon.ico">
 
     <link rel="icon" type="image/png" href="<?= Yii::getAlias('@web') ?>/favicon.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 
 
     <title><?= Html::encode($this->title) ?></title>
