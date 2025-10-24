@@ -3,7 +3,15 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-$this->title = 'Welcome | Alverstone Pharmacare LLP';
+
+$this->title = 'Alverstone Pharmacare LLP | AIM (Advanced Injection Manufacturing Plant) | Pharmacy Chain';
+
+// Meta description for this page
+// $this->params['meta_description'] = 'Precision-driven injectable production with automation, safety, and compliance at Alverstone Pharmacare LLP.';
+
+// Optional: custom OG image
+// $this->params['og_image'] = '/images/banners/17843.jpg';
+
 ?>
 
 <!-- Font Awesome -->

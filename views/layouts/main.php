@@ -61,23 +61,24 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <!-- Form security -->
     <?= Html::csrfMetaTags() ?> 
 <!-- SEO Meta Tags -->
-    <meta name="description" content="Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.">
-    <meta name="keywords" content="Pharmaceutical, Medicines, Injectable, Healthcare, India, Alverstone Pharmacare">
-    <meta name="author" content="Alverstone Pharmacare">
+ 
+    <!-- Meta description (default fallback) -->
+    <meta name="description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
 
-    <!-- Open Graph / Social Meta Tags -->
-    <meta property="og:title" content="Alverstone Pharmacare">
-    <meta property="og:description" content="Partner with Alverstone Pharmacare for high-quality medicines and global pharmaceutical solutions.">
-    <meta property="og:image" content="<?= Yii::$app->request->baseUrl ?>/favicon.ico">
-    <meta property="og:url" content="<?= Yii::$app->request->hostInfo ?>">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="<?= Html::encode($this->title) ?>">
+    <meta property="og:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
+    <meta property="og:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
+    <meta property="og:url" content="https://alverstonepharmacare.com/">
     <meta property="og:type" content="website">
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Alverstone Pharmacare">
-    <meta name="twitter:description" content="Partner with Alverstone Pharmacare for high-quality medicines and global pharmaceutical solutions.">
-    <meta name="twitter:image" content="<?= Yii::$app->request->baseUrl ?>/favicon.ico">
+    <meta name="twitter:title" content="<?= Html::encode($this->title) ?>">
+    <meta name="twitter:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Default description for Alverstone Pharmacare LLP') ?>">
+    <meta name="twitter:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
 
-    <!-- <link rel="icon" type="image/png" href="<?= Yii::getAlias('@web') ?>/favicon.png"> -->
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
