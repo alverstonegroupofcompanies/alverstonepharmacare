@@ -69,13 +69,13 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <meta property="og:title" content="<?= Html::encode($this->title) ?>">
     <meta property="og:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
     <meta property="og:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
-    <meta property="og:url" content="https://alverstonepharmacare.com/">
+    <meta property="og:url" content="https://alverstonepharmacare.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?= Html::encode($this->title) ?>">
-    <meta name="twitter:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Default description for Alverstone Pharmacare LLP') ?>">
+    <meta name="twitter:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
     <meta name="twitter:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
 
 

@@ -10,7 +10,7 @@ $this->title = 'Alverstone Pharmacare LLP | AIM (Advanced Injection Manufacturin
 // $this->params['meta_description'] = 'Precision-driven injectable production with automation, safety, and compliance at Alverstone Pharmacare LLP.';
 
 // Optional: custom OG image
-// $this->params['og_image'] = '/images/banners/17843.jpg';
+$this->params['og_image'] = '/images/banners/Pharmacare-llp-02.png';
 
 ?>
 
