@@ -60,7 +60,7 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
 
     <!-- Form security -->
     <?= Html::csrfMetaTags() ?> 
-<!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags -->
  
     <!-- Meta description (default fallback) -->
     <meta name="description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
@@ -68,7 +68,7 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="<?= Html::encode($this->title) ?>">
     <meta property="og:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
-    <meta property="og:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
+    <meta property="og:image" content="https://alverstonepharmacare.com/images/banners/Pharmacare-llp-02.png">
     <meta property="og:url" content="https://alverstonepharmacare.com">
     <meta property="og:type" content="website">
 
@@ -76,7 +76,7 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?= Html::encode($this->title) ?>">
     <meta name="twitter:description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
-    <meta name="twitter:image" content="<?= Html::encode($this->params['og_image'] ?? '/images/banners/Pharmacare-llp-02.png') ?>">
+    <meta name="twitter:image" content="https://alverstonepharmacare.com/images/banners/Pharmacare-llp-02.png">
 
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
