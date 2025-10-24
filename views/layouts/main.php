@@ -79,7 +79,7 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
     <meta name="twitter:image" content="https://alverstonepharmacare.com/images/banners/Pharmacare-llp-02.png">
 
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 
 
