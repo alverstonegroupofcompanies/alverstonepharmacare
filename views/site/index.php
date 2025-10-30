@@ -1,235 +1,278 @@
 <?php
-use yii\helpers\Html;
-use yii\helpers\Url;
-
 /* @var $this yii\web\View */
-
-$this->title = 'Alverstone Pharmacare LLP | AIM (Advanced Injection Manufacturing Plant) | Pharmacy Chain';
-
-// Meta description for this page
-// $this->params['meta_description'] = 'Precision-driven injectable production with automation, safety, and compliance at Alverstone Pharmacare LLP.';
-
-// Optional: custom OG image
-// $this->params['og_image'] = '/images/banners/Pharmacare-llp-02.png';
-
+$this->title = 'Alverstone Pharmacare LLP';
 ?>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* ===== Base Layout ===== */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background: #000;
-}
 
-.landing {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
-}
 
-/* ===== Sections ===== */
-.section {
-  flex: 1;
-  position: relative;
+/* ===== Hero Section ===== */
+.hero {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
   text-align: center;
-  cursor: pointer;
-  transition: all 0.6s cubic-bezier(.2,.8,.2,1);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.section:hover {
-  flex: 1.1;
-}
-
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
+  background-color: #fff;
+  background-image: url('/images/banners/4403214_18410.jpg'); /* <-- your vector path */
+  background-repeat: no-repeat;
+  background-size: cover; /* or 'contain' for smaller art */
   background-position: center;
-  z-index: 1;
-  transition: transform 2.5s ease, filter 0.5s ease;
-  will-change: transform;
+  padding: 60px 20px;
 }
 
-.section:hover::before {
-  transform: scale(1.08);
-  filter: brightness(1.05);
+/* ===== Title & Description ===== */
+.hero h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-family: "Inria Sans", sans-serif;
 }
 
-.section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 2;
-  transition: background 0.5s ease;
-}
-
-.section:hover::after {
-  background: rgba(0,0,0,0.25);
-}
-
-/* ===== Content ===== */
-.content {
-  position: relative;
-  z-index: 3;
-  max-width: 600px;
-  padding: 20px;
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.section:hover .content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.content i {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  transition: transform 0.4s ease;
-}
-
-.section:hover .content i {
-  transform: scale(1.15) rotate(3deg);
-}
-
-.content h1 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 0.6rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.content h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-  opacity: 0.95;
-}
-
-.content p {
+.hero p {
+  max-width: 680px;
+  margin: 10px auto 45px;
   font-size: 1.05rem;
   line-height: 1.6;
-  margin: 0 auto 1.2rem;
-  max-width: 500px;
-  opacity: 0.9;
+  color: #333;
+    font-family: "Saira", sans-serif;
+}
+/* ===== Portal Grid ===== */
+.portal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
 }
 
-/* ===== Buttons ===== */
-.login-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: rgba(255,255,255,0.2);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
+/* ===== Portal Card ===== */
+.portal-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 14px;
+  background: #fff;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
 }
 
-.login-btn:hover {
-  background: rgba(255,255,255,0.3);
-  border-color: #fff;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 4px 20px rgba(255,255,255,0.25);
+.portal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-/* ===== Section Backgrounds ===== */
-.section.aim::before {
-  background-image: linear-gradient(to bottom right, rgba(36,68,188,0.85), rgba(36,68,188,0.55)), 
-  url('/images/banners/17843.jpg');
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.section.pharma::before {
-  background-image: linear-gradient(to bottom right, rgba(68,180,76,0.85), rgba(68,180,76,0.55)), 
-  url('/images/banners/38127474_169_06_2019_19.jpg');
+.portal-card i {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
 }
 
-/* ===== Animation ===== */
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
+.portal-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: #2444bc;
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+}
+
+.portal-card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  max-width: 250px;
+}
+
+.portal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.portal-card i {
+  font-size: 2.3rem;
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.portal-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #2444bc;
+    font-family: "Saira", sans-serif;
+    font-weight: 600;
+}
+
+.portal-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+/* ===== Portal Login Button ===== */
+.portal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2444bc;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(135deg, #2444bc, #44b44c);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.portal-btn i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.portal-btn:hover {
+  background: linear-gradient(135deg, #2444bc, #44b44c);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(36, 68, 188, 0.3);
+  transform: translateY(-2px);
+}
+
+.portal-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* ===== Social Links ===== */
+.social {
+  margin-top: 40px;
+}
+
+.social a {
+  color: #2444bc;
+  font-size: 1.3rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #44b44c;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 40px;
+  color: #555;
+  font-size: 0.9rem;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .landing { flex-direction: column; height: auto; }
-  .section { width: 100%; min-height: 50vh; }
-  .content h1 { font-size: 2rem; }
-  .content h2 { font-size: 1.1rem; }
-  .content p { font-size: 0.95rem; }
-  .login-btn { padding: 10px 25px; font-size: 0.9rem; }
+@media (max-width: 768px) {
+  .portal-card { width: 90%; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 0.95rem; }
 }
 </style>
 
-<div class="landing" role="main" aria-label="Choose site section">
+<!-- ====== Hero Section ====== -->
+<div class="hero">
+  <div class="hero-content">
 
-  <!-- AIM Section -->
-  <section class="section aim" tabindex="0" data-target="<?= Url::to(['/site/pharmacare-home']) ?>">
-    <div class="content">
-      <i class="fa-solid fa-syringe"></i>
-      <h1>Alverstone Pharmacare LLP</h1>
-      <h2>Advanced Injection Manufacturing Plant (AIM)</h2>
-      <p>Precision-driven injectable production with automation, safety, and compliance at every stage.</p>
-      <a href="<?= Url::to(['/site/pharmacare-home']) ?>" class="login-btn">Login to AIM</a>
+
+
+    <!-- Title & Description -->
+    <h1>Alverstone Pharmacare LLP</h1>
+    <p>
+      Empowering healthcare through advanced injection manufacturing and a growing network of trusted pharmacy partners.
+    </p>
+
+    <!-- Portal Cards -->
+    <div class="portal-grid">
+
+      <!-- AIM Portal -->
+      <div class="portal-card">
+        <i class="fas fa-syringe"></i>
+        <h3>Advanced Injection Manufacturing</h3>
+        <p>Cutting-edge technology ensuring sterile, safe, and precise production.</p>
+        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacare-home']) ?>'">Login</button>
+      </div>
+
+      <!-- Pharmacy Network -->
+      <div class="portal-card">
+        <i class="fas fa-pills"></i>
+        <h3>Pharmacy Chain Network</h3>
+        <p>Delivering accessibility and reliability across every community we serve.</p>
+        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacy-chain']) ?>'">Login</button>
+      </div>
     </div>
-  </section>
 
-  <!-- Pharmacy Chain Section -->
-  <section class="section pharma" tabindex="0" data-target="<?= Url::to(['/site/pharmacy-chain']) ?>">
-    <div class="content">
-      <i class="fa-solid fa-prescription-bottle-medical"></i>
-      <h1>Pharmacy Chain</h1>
-      <h2>Alverstone Nationwide Retail & Wholesale Network</h2>
-      <p>Ensuring trusted healthcare delivery through innovation and service excellence across India.</p>
-      <a href="<?= Url::to(['/site/pharmacy-chain']) ?>" class="login-btn">Login to Pharmacy Chain</a>
+    <!-- Social Icons -->
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-  </section>
 
+    <!-- Footer -->
+    <footer>
+      © <?= date('Y') ?> Alverstone Pharmacare LLP. All rights reserved.
+    </footer>
+  </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.section').forEach(sec => {
-    sec.addEventListener('click', () => {
-      const url = sec.dataset.target;
-      if (url) window.location.href = url;
-    });
-    sec.addEventListener('keydown', e => {
-      if (['Enter',' '].includes(e.key)) {
-        e.preventDefault();
-        const url = sec.dataset.target;
-        if (url) window.location.href = url;
-      }
-    });
-  });
-
-  // Fade in content after page load
-  setTimeout(() => {
-    document.querySelectorAll('.content').forEach(el => {
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    });
-  }, 400);
-});
-</script>

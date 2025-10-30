@@ -482,10 +482,7 @@
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
-html, body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
+
 
 section {
   scroll-snap-align: start;
