@@ -22,31 +22,54 @@ h2 {
 }
 
 </style>
-<!-- ====== Minimal Hero Banner ====== -->
-<section class="hero-banner">
-    <div class="hero-content">
-        <!-- <h1>Alverstone Pharmacare LLP - Pharmacy Chain</h1> -->
-    </div>
-</section>
+<!-- ====== Minimal Hero Banner with Responsive Image ====== -->
+
+    <picture>
+        <!-- Mobile version -->
+        <source media="(max-width: 767px)" 
+                srcset="<?= Yii::getAlias('@web/images/hero/vertical.png') ?>">
+        <!-- Desktop version -->
+        <img src="<?= Yii::getAlias('@web/images/hero/horizontal.png') ?>" 
+             alt="Alverstone Pharmacare LLP - Pharmacy Chain" 
+             class="hero-image">
+    </picture>
+
+
+
 
 <style>
 .hero-banner {
     width: 100%;
-    min-height: 50vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: 
-        linear-gradient(
-            rgba(36,68,188,0.25),
-            rgba(68,180,76,0.25)
-        ),
-        url('<?= Yii::getAlias("@web/images/banners/Alverstone Pharmacare LLP - Pharmacy Chain.png") ?>') center/cover no-repeat;
-    color: #fff;
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
 
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .hero-banner {
+        height: auto; /* auto height based on image */
+    }
+    .hero-banner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* fit vertical image fully */
+        display: block;
+        margin: 0 auto;
+    }
+}
 </style>
+
 <!-- ====== About Us Section ====== -->
 <section class="about-us" id="about-us">
   <div class="about-container">

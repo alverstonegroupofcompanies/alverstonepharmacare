@@ -536,3 +536,6 @@ section {
 .location-list.active {
   display: block;
 }
+html, body{
+  overflow-y: inherit;
+}
