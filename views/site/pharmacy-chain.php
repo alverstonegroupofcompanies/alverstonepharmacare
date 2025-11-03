@@ -23,53 +23,130 @@ h2 {
 
 </style>
 <!-- ====== Minimal Hero Banner with Responsive Image ====== -->
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-    <picture>
-        <!-- Mobile version -->
-        <source media="(max-width: 767px)" 
-                srcset="<?= Yii::getAlias('@web/images/hero/vertical.png') ?>">
-        <!-- Desktop version -->
-        <img src="<?= Yii::getAlias('@web/images/hero/horizontal.png') ?>" 
-             alt="Alverstone Pharmacare LLP - Pharmacy Chain" 
-             class="hero-image">
-    </picture>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="hero-banner">
+    <div class="owl-carousel hero-carousel">
+        <!-- Slide 1 -->
+        <picture>
+            <source media="(max-width: 767px)" srcset="<?= Yii::getAlias('@web/images/hero/vertical.png') ?>">
+            <img src="<?= Yii::getAlias('@web/images/hero/horizontal.png') ?>" alt="Alverstone Pharmacare LLP - Pharmacy Chain" class="hero-image">
+        </picture>
 
 
+        <!-- <picture>
+            <source media="(max-width: 767px)" srcset="<?= Yii::getAlias('@web/images/hero/vertical2.png') ?>">
+            <img src="<?= Yii::getAlias('@web/images/hero/horizontal2.png') ?>" alt="Alverstone Pharmacare LLP - Pharmacy Chain" class="hero-image">
+        </picture>
 
+   
+        <picture>
+            <source media="(max-width: 767px)" srcset="<?= Yii::getAlias('@web/images/hero/vertical3.png') ?>">
+            <img src="<?= Yii::getAlias('@web/images/hero/horizontal3.png') ?>" alt="Alverstone Pharmacare LLP - Pharmacy Chain" class="hero-image">
+        </picture> -->
+    </div>
+</section>
 
+<!-- jQuery + Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.hero-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4500,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: true,
+        navText: [
+            '<span class="flat-arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></span>',
+            '<span class="flat-arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></span>'
+        ],
+        animateOut: 'fadeOut'
+    });
+});
+</script>
 <style>
-.hero-banner {
+  .hero-banner {
     width: 100%;
     min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     overflow: hidden;
-    text-align: center;
 }
 
-.hero-image {
+.hero-carousel .hero-image {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
-/* Mobile adjustments */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.owl-nav button {
+    background: none;
+    border: none;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* Flat gradient icon buttons */
+.flat-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    background: linear-gradient(135deg, #2444bc, #44b44c);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.flat-arrow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.left-arrow { margin-left: 15px; }
+.right-arrow { margin-right: 15px; }
+
+/* Keep arrows near screen edges */
+.owl-prev { position: absolute; left: 0; }
+.owl-next { position: absolute; right: 0; }
+
+/* Responsive adjustments */
 @media (max-width: 767px) {
-    .hero-banner {
-        height: auto; /* auto height based on image */
-    }
-    .hero-banner img {
-        width: 100%;
+    .hero-carousel .hero-image {
         height: auto;
-        object-fit: contain; /* fit vertical image fully */
-        display: block;
-        margin: 0 auto;
+        object-fit: contain;
+    }
+    /* Hide navigation arrows on mobile */
+    .owl-nav {
+        display: none !important;
     }
 }
-</style>
 
+</style>
 <!-- ====== About Us Section ====== -->
 <section class="about-us" id="about-us">
   <div class="about-container">
