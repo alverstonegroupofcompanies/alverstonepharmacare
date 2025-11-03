@@ -50,37 +50,30 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
   'depends' => [\yii\web\JqueryAsset::class]
 ]);
 ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<?php $VESRION = '1.0.4'; ?>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
+    <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Alverstone Pharmacare LLP – Advanced Injection Manufacturing & Pharmacy Chain Network">
+  <meta name="keywords" content="Alverstone Pharmacare LLP, part of the Alverstone Group of Companies, specializes in advanced injection manufacturing (AIM) and a growing pharmacy chain network, driving healthcare innovation and pharmaceutical excellence across India.">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Alverstone Group of Companies | Investment Opportunities in Trivandrum & Kerala | Leading pharmaceutical">
+  <meta property="og:description" content="Alverstone Pharmacare LLP, part of the Alverstone Group of Companies, specializes in advanced injection manufacturing (AIM) and a growing pharmacy chain network, driving healthcare innovation and pharmaceutical excellence across India.">
+  <meta property="og:image" content="https://www.alverstonepharmacare.com/images/banners/Pharmacare-LLP-WIDE.png">
+  <meta property="og:url" content="https://www.alverstone.com/">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alverstone Pharmacare LLP – Advanced Injection Manufacturing & Pharmacy Chain Network">
+  <meta name="twitter:description" content="High Quality and Affordable Medical Drugs. Global presence in India, UAE, Kenya, and more.">
+  <meta name="twitter:image" content="https://www.alverstonepharmacare.com/images/banners/Pharmacare-LLP-WIDE.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-
-    <!-- Form security -->
-    <?= Html::csrfMetaTags() ?> 
-    <!-- SEO Meta Tags -->
- 
-    <!-- Meta description (default fallback) -->
-    <meta name="description" content="<?= Html::encode($this->params['meta_description'] ?? 'Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.') ?>">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="<?= Html::encode($this->title) ?>">
-    <meta property="og:description" content="Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.">
-    <meta property="og:image" content="https://alverstonepharmacare.com/images/banners/Pharmacare-llp-02.png">
-    <meta property="og:url" content="https://alverstonepharmacare.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= Html::encode($this->title) ?>">
-    <meta name="twitter:description" content="Alverstone Pharmacare - High-quality pharmaceutical injectables, trusted partners, and global presence.">
-    <meta name="twitter:image" content="https://alverstonepharmacare.com/images/banners/Pharmacare-llp-02.png">
-
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.png" type="image/png">
 
 
 
