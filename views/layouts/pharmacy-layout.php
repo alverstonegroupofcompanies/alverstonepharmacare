@@ -53,10 +53,26 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
 
+    <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Alverstone Pharmacare LLP – Advanced Injection Manufacturing & Pharmacy Chain Network">
+  <meta name="keywords" content="Alverstone Pharmacare LLP, part of the Alverstone Group of Companies, specializes in advanced injection manufacturing (AIM) and a growing pharmacy chain network, driving healthcare innovation and pharmaceutical excellence across India.">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Alverstone Pharmacare LLP – Advanced Injection Manufacturing & Pharmacy Chain Network">
+  <meta property="og:description" content="Alverstone Pharmacare LLP, part of the Alverstone Group of Companies, specializes in advanced injection manufacturing (AIM) and a growing pharmacy chain network, driving healthcare innovation and pharmaceutical excellence across India.">
+  <meta property="og:image" content="https://www.alverstonepharmacare.com/images/banners/Pharmacare-LLP-WIDE.png">
+  <meta property="og:url" content="https://www.alverstone.com/">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alverstone Pharmacare LLP – Advanced Injection Manufacturing & Pharmacy Chain Network">
+  <meta name="twitter:description" content="High Quality and Affordable Medical Drugs. Global presence in India, UAE, Kenya, and more.">
+  <meta name="twitter:image" content="https://www.alverstonepharmacare.com/images/banners/Pharmacare-LLP-WIDE.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Form security -->
     <?= Html::csrfMetaTags() ?> 
