@@ -250,7 +250,7 @@ footer {
         <i class="fas fa-syringe"></i>
         <h3>Advanced Injection Manufacturing</h3>
         <p>Cutting-edge technology ensuring sterile, safe, and precise production.</p>
-        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacare-home']) ?>'">Login</button>
+        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacare-home']) ?>'">Know More</button>
       </div>
 
       <!-- Pharmacy Network -->
@@ -258,7 +258,7 @@ footer {
         <i class="fas fa-pills"></i>
         <h3>Pharmacy Chain Network</h3>
         <p>Delivering accessibility and reliability across every community we serve.</p>
-        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacy-chain']) ?>'">Login</button>
+        <button class="portal-btn" onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['site/pharmacy-chain']) ?>'">Know More</button>
       </div>
     </div>
 
